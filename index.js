@@ -2,7 +2,7 @@ import express from 'express'
 import dotenv from 'dotenv'
 import { ethers, utils, Contract} from "ethers";
 import factoryAbi from './abis/factory.json' assert { type: "json" };
-
+import cors from 'cors'
 
 const IFactory = new utils.Interface(factoryAbi)
 
@@ -75,6 +75,7 @@ return {
 }
 
 const app = express()
+app.use(cors())
 const PORT = 4000
 
 dotenv.config()
