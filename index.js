@@ -1,4 +1,4 @@
-import { generateEIP712Signature, createSalt } from './api/_createSigTest'
+import { generateEIP712Signature, createSalt } from './api/_createSigTest.js'
 import express from 'express'
 import dotenv from 'dotenv'
 
