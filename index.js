@@ -4,7 +4,6 @@ import dotenv from 'dotenv'
 import { ethers, utils, Contract} from "ethers";
 import factoryAbi from './abis/factory.json' assert { type: "json" };
 
-
 const IFactory = new utils.Interface(factoryAbi)
 
 const factory = '0x762C2b5165E57A9B7B843F5B968C11Fe1d2F55Dd'
