@@ -108,4 +108,3 @@ app.post('/createCompounder', async (req, res) => {
 })
 
 // Export the Express API
-module.exports = app
