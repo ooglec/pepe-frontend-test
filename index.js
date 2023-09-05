@@ -1,6 +1,15 @@
 import { generateEIP712Signature, createSalt } from './api/_createSigTest.js'
 import express from 'express'
 import dotenv from 'dotenv'
+import { ethers, utils, Contract} from "ethers";
+import factoryAbi from './abis/factory.json' assert { type: "json" };
+
+
+const IFactory = new utils.Interface(factoryAbi)
+
+const factory = '0x762C2b5165E57A9B7B843F5B968C11Fe1d2F55Dd'
+const provider = new ethers.providers.JsonRpcProvider('https://arb1.arbitrum.io/rpc')
+const FactoryContract = new Contract(factory, IFactory, provider)
 
 const app = express()
 const PORT = 4000
